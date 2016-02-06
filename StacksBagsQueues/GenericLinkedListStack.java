@@ -1,7 +1,7 @@
 package StacksBagsQueues;
 
 public class GenericLinkedListStack<Item>{
-	private Node first;
+	private Node first=null;
 	
 	private class Node{
 		private Item item;
