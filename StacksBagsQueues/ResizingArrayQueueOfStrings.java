@@ -52,6 +52,6 @@ public class ResizingArrayQueueOfStrings {
 	}
 	
 	int size(){
-		return this.tail-this.head;
+		return this.array.length;
 	}
 }
