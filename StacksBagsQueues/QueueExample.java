@@ -14,20 +14,19 @@ public class QueueExample {
 		System.out.println(lq.dequeue());
 		
 		
-		ResizingArrayQueueOfStrings raq = new ResizingArrayQueueOfStrings(3);
+		ResizingArrayQueueOfStrings raq = new ResizingArrayQueueOfStrings(2);
 		raq.enqueue("Hello");
 		raq.enqueue("world");
 		raq.enqueue("second");
 		raq.enqueue("and last");
-		System.out.println(raq.size());
 		raq.enqueue("test");
-		System.out.println(raq.size());
-		raq.display();
 		System.out.println(raq.dequeue());
 		System.out.println(raq.dequeue());
-		System.out.println(raq.size());
 		System.out.println(raq.dequeue());
 		System.out.println(raq.size());
 		System.out.println(raq.dequeue());
+		System.out.println(raq.size());
+		System.out.println(raq.dequeue());
+		System.out.println(raq.size());
 	}
 }
