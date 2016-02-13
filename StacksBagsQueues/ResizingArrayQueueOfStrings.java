@@ -19,6 +19,8 @@ public class ResizingArrayQueueOfStrings {
 					j++;
 				}
 			}
+			this.tail=j;
+			this.head=0;
 			this.array = biggerArray;
 		}
 		this.array[this.tail++] = item;
@@ -34,6 +36,8 @@ public class ResizingArrayQueueOfStrings {
 					j++;
 				}
 			}
+			this.tail=j;
+			this.head=0;
 			this.array = biggerArray;
 		}	
 		String item = this.array[this.head];
