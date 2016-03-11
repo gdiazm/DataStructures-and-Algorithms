@@ -1,0 +1,47 @@
+package HashTables;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class SequentialSearchST<Key, Value>{
+	private Node first;
+	
+	private class Node{
+		private Key key;
+		private Value val;
+		private Node next;
+		Node(Key key, Value val, Node next){
+			this.key = key;
+			this.val = val;
+			this.next = next;
+		}
+	}
+	
+	public SequentialSearchST(){}
+	
+	public void put(Key k, Value v){
+		for(Node x = this.first; x!=null; x = x.next){
+			if(x.key.equals(k)){
+				x.val = v;
+				return;
+			}
+		}
+		Node oldFirst = this.first;
+		this.first = new Node(k,v,oldFirst);
+	}
+	
+	public Value get(Key k){
+		for(Node x = this.first; x!=null; x = x.next){
+			if(x.key.equals(k)){return x.val;}
+		}
+		return null;
+	}
+	
+	public Iterable<Key> keys(){
+		Collection<Key> l = new ArrayList<Key>();
+		for(Node x = this.first; x!=null; x = x.next){
+			l.add(x.key);
+		}
+		return l;
+	}
+}
